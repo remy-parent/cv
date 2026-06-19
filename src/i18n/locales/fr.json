@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "logo": "RP.",
+    "stack": "Stack",
+    "experience": "Expérience",
+    "values": "Valeurs",
+    "currentlyOn": "Actuellement",
+    "contact": "Contact"
+  },
+  "hero": {
+    "availability": "Disponible · Temps plein · Remote friendly",
+    "hook": "9 ans d'expérience back-end dans l'e-commerce à grande échelle.",
+    "description": "Développeur back-end senior spécialisé en PHP, Magento 2 et AWS. J'aide les équipes e-commerce à construire des architectures robustes, performantes et maintenables.",
+    "ctaContact": "Me contacter",
+    "ctaBackground": "Voir mon parcours"
+  },
+  "stats": {
+    "eyebrow": "En chiffres"
+  },
+  "techStack": {
+    "eyebrow": "Compétences",
+    "title": "Stack technique"
+  },
+  "experience": {
+    "eyebrow": "Parcours",
+    "title": "Expérience"
+  },
+  "values": {
+    "eyebrow": "Pourquoi moi",
+    "title": "Ce que j'apporte"
+  },
+  "currentlyOn": {
+    "eyebrow": "En ce moment",
+    "title": "Actuellement sur",
+    "status": "En cours · 2026"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Travaillons ensemble",
+    "description": "Disponible pour de nouvelles opportunités à Aix-en-Provence, Marseille ou en remote.",
+    "emailLabel": "Email",
+    "phoneLabel": "Téléphone",
+    "linkedinLabel": "LinkedIn"
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "description": "Cette page n'existe pas.",
+    "back": "Retour à l'accueil"
+  },
+  "languageToggle": {
+    "fr": "FR",
+    "en": "EN"
+  }
+}
