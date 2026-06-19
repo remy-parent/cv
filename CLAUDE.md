@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project state
 
-This is `remyparent.com`, Remy Parent's bilingual (FR/EN) personal CV/portfolio site. Single-page layout with path-based locale routing, deployed as a static build (no Node process) to an Nginx-served VPS.
+This is `remyparent-cv`, Remy Parent's bilingual (FR/EN) personal CV/portfolio site. Single-page layout with path-based locale routing, deployed as a static build (no Node process) to an Nginx-served VPS.
 
 ## Commands
 
