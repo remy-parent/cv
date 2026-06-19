@@ -9,7 +9,7 @@
   --color-accent: #f59e0b;
   --color-accent-soft: rgba(245, 158, 11, 0.12);
 
-  --font-heading: 'Syne', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
   --font-mono: 'DM Mono', ui-monospace, monospace;
 }
 
@@ -31,4 +31,5 @@ h2,
 h3 {
   font-family: var(--font-heading);
   font-weight: 800;
+  letter-spacing: 0.01em;
 }
