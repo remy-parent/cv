@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project state
 
-This is `remyparent-cv`, Remy Parent's bilingual (FR/EN) personal CV/portfolio site. Single-page layout with path-based locale routing, deployed as a static build (no Node process) to an Nginx-served VPS.
+This is `remyparent-cv`, Remy Parent's bilingual (FR/EN) personal CV/portfolio site. Single-page layout with path-based locale routing, deployed as a static build on Vercel.
 
 ## Commands
 
@@ -41,5 +41,5 @@ A Husky `pre-commit` hook runs `npx lint-staged`, which runs `eslint --fix` + `p
 
 ## Deployment notes
 
-- Production build (`dist/`) is meant to be served directly by Nginx, no Node process. Because routing is client-side (`BrowserRouter`), Nginx needs a SPA fallback (`try_files $uri /index.html;`) so that `/fr`, `/en`, etc. don't 404 on a hard refresh.
-- `VITE_` prefix is required for any env var exposed to the client (Vite convention). See `.env.example` for the currently used `VITE_SITE_URL`.
+- Deployed to Vercel (auto-detected Vite preset: `npm run build`, output `dist/`). Because routing is client-side (`BrowserRouter`), `vercel.json` rewrites all paths to `/index.html` so that `/fr`, `/en`, etc. don't 404 on a hard refresh or direct link.
+- `VITE_` prefix is required for any env var exposed to the client (Vite convention). See `.env.example` for the currently used `VITE_SITE_URL` — set it in the Vercel project's Environment Variables.
