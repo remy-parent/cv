@@ -3,7 +3,6 @@ import AnimatedSection from '../layout/AnimatedSection';
 import SectionHeading from '../ui/SectionHeading';
 
 const EMAIL = 'remy.email@icloud.com';
-const PHONE = 'REDACTED';
 const LINKEDIN = 'linkedin.com/in/remyparent';
 
 export default function Contact() {
@@ -19,14 +18,6 @@ export default function Contact() {
           <dd>
             <a href={`mailto:${EMAIL}`} className="text-accent hover:underline">
               {EMAIL}
-            </a>
-          </dd>
-        </div>
-        <div className="flex justify-center gap-2">
-          <dt className="text-text-muted">{t('contact.phoneLabel')}:</dt>
-          <dd>
-            <a href={`tel:${PHONE.replace(/\./g, '')}`} className="text-accent hover:underline">
-              {PHONE}
             </a>
           </dd>
         </div>
