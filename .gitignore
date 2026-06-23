@@ -33,3 +33,4 @@ dist-ssr
 # Source CV material (PII, not used by the app at runtime)
 /*.pdf
 image_remy.JPEG
+/.claude/settings.local.json

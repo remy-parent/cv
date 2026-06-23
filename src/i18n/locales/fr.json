@@ -29,7 +29,9 @@
   "currentlyOn": {
     "eyebrow": "En ce moment",
     "title": "Actuellement sur",
-    "status": "En cours · 2026"
+    "status": "En cours · 2026",
+    "issuedBy": "Émis par Anthropic Education",
+    "verify": "Vérifier"
   },
   "education": {
     "eyebrow": "Études",

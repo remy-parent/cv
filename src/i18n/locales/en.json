@@ -29,7 +29,9 @@
   "currentlyOn": {
     "eyebrow": "Right now",
     "title": "Currently working on",
-    "status": "In progress · 2026"
+    "status": "In progress · 2026",
+    "issuedBy": "Issued by Anthropic Education",
+    "verify": "Verify"
   },
   "education": {
     "eyebrow": "Studies",
