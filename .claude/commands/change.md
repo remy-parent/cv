@@ -8,7 +8,12 @@ Goal: create branch `$1` from an up-to-date `origin/master`.
 
 Follow these steps in order, without skipping any:
 
-1. If `$1` is empty, ask me for the name (Conventional Commits format: `feat/`, `fix/`, `chore/`...) and wait.
+1. If `$1` is empty, do NOT guess or create anything. First ask me what I want to work on
+   (the change I'm about to make). Based on my answer:
+
+- propose a branch name in Conventional Commits format (`feat/`, `fix/`, `chore/`, `docs/`, `refactor/`...),
+- confirm it with me before proceeding.
+  Wait for my confirmation. Only continue to step 2 once the branch name is agreed.
 
 2. Check the current branch: `git branch --show-current`.
 
