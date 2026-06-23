@@ -20,7 +20,7 @@ export default function Home() {
         <title>Remy Parent — Senior Back-End Developer</title>
         <meta
           name="description"
-          content="Remy Parent — Senior Back-End Developer specialized in PHP, Magento 2, AWS and e-commerce architecture."
+          content="Remy Parent — Senior back-end developer. I help e-commerce teams turn business needs into reliable, well-architected systems, with 9 years of experience from legacy refactors to greenfield microservices."
         />
         <link rel="canonical" href={`${siteUrl}/${lang}`} />
       </Helmet>
