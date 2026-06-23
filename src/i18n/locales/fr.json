@@ -34,6 +34,12 @@
     "title": "Actuellement sur",
     "status": "En cours · 2026"
   },
+  "education": {
+    "eyebrow": "Études",
+    "title": "Formation",
+    "entry": "Conception et programmation de sites web — Collège de Maisonneuve, Montréal",
+    "period": "2015–2017"
+  },
   "contact": {
     "eyebrow": "Contact",
     "title": "Travaillons ensemble",

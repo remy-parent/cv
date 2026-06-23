@@ -8,6 +8,7 @@ import TechStack from '../components/sections/TechStack';
 import Experience from '../components/sections/Experience';
 import ValueProposition from '../components/sections/ValueProposition';
 import CurrentlyWorkingOn from '../components/sections/CurrentlyWorkingOn';
+import Education from '../components/sections/Education';
 import Contact from '../components/sections/Contact';
 
 export default function Home() {
@@ -32,6 +33,7 @@ export default function Home() {
         <Experience />
         <ValueProposition />
         <CurrentlyWorkingOn />
+        <Education />
         <Contact />
       </main>
       <Footer />
