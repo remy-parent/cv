@@ -7,7 +7,7 @@ export const techStack: TechCategory[] = [
   },
   {
     category: { fr: 'Data & APIs', en: 'Data & APIs' },
-    skills: ['MySQL', 'DynamoDB', 'REST APIs', 'Serverless Framework'],
+    skills: ['MySQL', 'DynamoDB', 'REST APIs', 'GraphQL', 'Serverless Framework'],
   },
   {
     category: { fr: 'Cloud & DevOps', en: 'Cloud & DevOps' },
@@ -15,11 +15,20 @@ export const techStack: TechCategory[] = [
   },
   {
     category: { fr: 'Front-end', en: 'Front-end' },
-    skills: ['React', 'Next.js', 'JavaScript', 'HTML/CSS'],
+    skills: [
+      'React',
+      'Next.js',
+      'JavaScript',
+      'HTML/CSS',
+      'Unit testing',
+      'Vitest',
+      'Playwright',
+      'Jest',
+    ],
   },
   {
     category: { fr: 'Architecture', en: 'Architecture' },
-    skills: ['SOLID', 'Clean Code', 'Revue de code', 'Microservices'],
+    skills: ['SOLID', 'Clean Code', 'Revue de code', 'Microservices', 'Claude Code', 'Claude API'],
   },
   {
     category: { fr: 'Langues', en: 'Languages' },
