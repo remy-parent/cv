@@ -35,11 +35,15 @@ Steps in order. **If a step fails, STOP**, show me the error, do not continue.
 8. **Push**: `git push --force-with-lease -u origin <current-branch>`.
    (`--force-with-lease` because a rebase rewrites history; never plain `--force`.)
 
-9. **PR**: check whether a PR already exists (`gh pr view`). If not, create it:
-   `gh pr create --base master --fill`
+9. **PR**: check whether a PR already exists (`gh pr view`).
 
-- If I passed a title as an argument, use it; otherwise let `--fill` infer it from the commits.
-- The body should summarize the changes + tick: lint OK, tests OK.
+- If it does NOT exist, create it via CLI: `gh pr create --base master --fill`
+  - If I passed a title as an argument, use it; otherwise let `--fill` infer it from the commits.
+  - The PR title MUST follow Conventional Commits (becomes the squash commit on master).
+  - The body should summarize the changes + tick: lint OK, tests OK.
+- Then open it in the browser: `gh pr view --web`
+  (Creates the PR via CLI first, then opens the existing PR page — so /submit really
+  creates it rather than just opening a prefilled form.)
 
 10. **Confirm**: show the PR URL. Remind me the rest is manual
     (GitHub CI, code review, Vercel preview check) before merge.
