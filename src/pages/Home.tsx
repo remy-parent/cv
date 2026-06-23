@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import Nav from '../components/layout/Nav';
 import Footer from '../components/layout/Footer';
 import Hero from '../components/sections/Hero';
-import StatsBar from '../components/sections/StatsBar';
 import TechStack from '../components/sections/TechStack';
 import Experience from '../components/sections/Experience';
 import ValueProposition from '../components/sections/ValueProposition';
@@ -28,7 +27,6 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <StatsBar />
         <TechStack />
         <Experience />
         <ValueProposition />

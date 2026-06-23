@@ -2,11 +2,6 @@ export type Lang = 'fr' | 'en';
 
 export type Bilingual<T> = Record<Lang, T>;
 
-export interface StatItem {
-  value: string;
-  label: Bilingual<string>;
-}
-
 export interface TechCategory {
   category: Bilingual<string>;
   skills: string[];
