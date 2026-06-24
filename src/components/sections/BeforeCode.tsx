@@ -16,7 +16,7 @@ export default function BeforeCode() {
       <div className="relative border-l border-border pl-8">
         <span
           aria-hidden="true"
-          className="absolute -left-[5px] top-1.5 size-2.5 rounded-full border border-[#4b5563] bg-bg"
+          className="absolute -left-[5px] top-1.5 size-2.5 rounded-full border border-node-muted bg-bg"
         />
         <button
           type="button"
@@ -45,10 +45,10 @@ export default function BeforeCode() {
             <li key={entry.label} className="relative border-l border-border pl-8">
               <span
                 aria-hidden="true"
-                className="absolute -left-[5px] top-1.5 size-2.5 rounded-full bg-[#4b5563]"
+                className="absolute -left-[5px] top-1.5 size-2.5 rounded-full bg-node-muted"
               />
-              <p className="font-mono text-sm text-[#6b7280]">{entry.period}</p>
-              <p className="mt-1 text-[#9ca3af]">{entry.label}</p>
+              <p className="font-mono text-sm text-faint-strong">{entry.period}</p>
+              <p className="mt-1 text-faint">{entry.label}</p>
             </li>
           ))}
         </ul>

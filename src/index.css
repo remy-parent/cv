@@ -9,8 +9,30 @@
   --color-accent: #f59e0b;
   --color-accent-soft: rgba(245, 158, 11, 0.12);
 
+  /* Muted "before I wrote code" timeline entries (dark defaults). */
+  --color-faint: #9ca3af;
+  --color-faint-strong: #6b7280;
+  --color-node-muted: #4b5563;
+
   --font-heading: 'Outfit', sans-serif;
   --font-mono: 'DM Mono', ui-monospace, monospace;
+}
+
+/* Light theme — same design, only the color tokens change. Activated by the
+   `data-theme="light"` attribute on <html> (set by the toggle + the inline
+   anti-flash script in index.html). Dark stays the default above. */
+html[data-theme='light'] {
+  --color-bg: #f7f7f5;
+  --color-bg-raised: #ffffff;
+  --color-border: #e4e3df;
+  --color-text: #16171b;
+  --color-text-muted: #62636b;
+  --color-accent: #b9770d;
+  --color-accent-soft: rgba(245, 158, 11, 0.14);
+
+  --color-faint: #86878e;
+  --color-faint-strong: #9a9ba1;
+  --color-node-muted: #b0b1b7;
 }
 
 html {

@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageToggle from './LanguageToggle';
+import ThemeToggle from './ThemeToggle';
 
 export default function Nav() {
   const { lang } = useParams();
@@ -29,7 +30,10 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-        <LanguageToggle />
+        <div className="flex items-center gap-1">
+          <ThemeToggle />
+          <LanguageToggle />
+        </div>
       </nav>
     </header>
   );

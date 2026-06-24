@@ -62,5 +62,8 @@
   "languageToggle": {
     "fr": "FR",
     "en": "EN"
+  },
+  "themeToggle": {
+    "label": "Basculer le thème"
   }
 }
