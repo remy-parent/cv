@@ -22,13 +22,17 @@ export default function Hero() {
           </Button>
         </div>
       </div>
-      <img
-        src={profile}
-        alt="Remy Parent"
-        width={220}
-        height={220}
-        className="aspect-square w-44 rounded-full border-2 border-accent object-cover md:w-56"
-      />
+      <div className="flex justify-center md:flex-1">
+        <div className="aspect-square w-44 overflow-hidden rounded-full border-2 border-accent md:w-56">
+          <img
+            src={profile}
+            alt="Remy Parent"
+            width={220}
+            height={220}
+            className="h-full w-full translate-x-[5%] scale-110 object-cover object-[center_22%]"
+          />
+        </div>
+      </div>
     </AnimatedSection>
   );
 }
