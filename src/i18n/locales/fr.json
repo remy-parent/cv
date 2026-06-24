@@ -20,7 +20,12 @@
   },
   "experience": {
     "eyebrow": "Parcours",
-    "title": "Expérience"
+    "title": "Expérience",
+    "beforeCodeToggle": "Et avant de coder…",
+    "beforeCode": [
+      { "period": "2008–2015", "label": "Auteur humoristique · Montréal" },
+      { "period": "2005–2008", "label": "Massothérapeute · Québec" }
+    ]
   },
   "values": {
     "eyebrow": "Pourquoi moi",

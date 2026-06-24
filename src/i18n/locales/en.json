@@ -20,7 +20,12 @@
   },
   "experience": {
     "eyebrow": "Background",
-    "title": "Experience"
+    "title": "Experience",
+    "beforeCodeToggle": "Before I wrote code…",
+    "beforeCode": [
+      { "period": "2008–2015", "label": "Comedy writer · Montreal" },
+      { "period": "2005–2008", "label": "Massage therapist · Quebec City" }
+    ]
   },
   "values": {
     "eyebrow": "Why me",

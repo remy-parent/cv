@@ -3,6 +3,7 @@ import { experience } from '../../data/experience';
 import { useCurrentLang } from '../../hooks/useCurrentLang';
 import AnimatedSection from '../layout/AnimatedSection';
 import SectionHeading from '../ui/SectionHeading';
+import BeforeCode from './BeforeCode';
 import ExperienceItem from './ExperienceItem';
 
 export default function Experience() {
@@ -16,6 +17,7 @@ export default function Experience() {
         {experience.map((entry) => (
           <ExperienceItem key={entry.id} entry={entry} lang={lang} />
         ))}
+        <BeforeCode />
       </ul>
     </AnimatedSection>
   );
