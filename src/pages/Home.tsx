@@ -17,10 +17,10 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Remy Parent — Senior Back-End Developer</title>
+        <title>Remy Parent — Senior Full-stack Developer</title>
         <meta
           name="description"
-          content="Remy Parent — Senior back-end developer. I help e-commerce teams turn business needs into reliable, well-architected systems, with 9 years of experience from legacy refactors to greenfield microservices."
+          content="Remy Parent — Senior full-stack developer with a strong back-end e-commerce background. React / Next.js / TypeScript on the front, Node.js / API on the server — complete products, typed and tested end-to-end."
         />
         <link rel="canonical" href={`${siteUrl}/${lang}`} />
       </Helmet>

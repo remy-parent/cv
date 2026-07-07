@@ -2,17 +2,17 @@ import type { ValueCardItem } from '../types/content';
 
 export const valueProposition: ValueCardItem[] = [
   {
-    title: { fr: 'Architecture robuste', en: 'Robust architecture' },
+    title: { fr: 'Full-stack, typé de bout en bout', en: 'End-to-end typed full-stack' },
     description: {
-      fr: 'Code clean, principes SOLID et revues de code rigoureuses pour des systèmes maintenables sur le long terme.',
-      en: 'Clean code, SOLID principles, and rigorous code reviews for systems that stay maintainable long-term.',
+      fr: 'React / Next.js / TypeScript côté front, Node.js / API côté serveur : des produits complets, typés et testés (Vitest / Playwright).',
+      en: 'React / Next.js / TypeScript on the front, Node.js / API on the server: complete products, typed and tested (Vitest / Playwright).',
     },
   },
   {
     title: { fr: 'E-commerce à grande échelle', en: 'E-commerce at scale' },
     description: {
-      fr: '9 ans à concevoir et faire évoluer des plateformes Magento et microservices pour des marques internationales.',
-      en: '9 years designing and scaling Magento platforms and microservices for international brands.',
+      fr: '8 ans à concevoir et faire évoluer des plateformes Magento et des microservices pour des marques internationales.',
+      en: '8 years designing and scaling Magento platforms and microservices for international brands.',
     },
   },
   {

@@ -5,7 +5,7 @@ import AnimatedSection from '../layout/AnimatedSection';
 import SectionHeading from '../ui/SectionHeading';
 import Tag from '../ui/Tag';
 
-const TAGS = ['Anthropic', 'Claude API', 'LLM Architecture', 'Prompt Engineering'];
+const TAGS = ['Anthropic', 'Claude API', 'MCP', 'LLM Architecture', 'Prompt Engineering'];
 
 interface Certification {
   name: string;
@@ -23,6 +23,21 @@ const CERTIFICATIONS: Certification[] = [
     name: 'Claude Code in Action',
     date: { fr: 'Juin 2026', en: 'June 2026' },
     url: 'https://verify.skilljar.com/c/hu8raudyayra',
+  },
+  {
+    name: 'Building with the Claude API',
+    date: { fr: '2026', en: '2026' },
+    url: 'https://verify.skilljar.com/c/ncmbuppm9k2m',
+  },
+  {
+    name: 'Introduction to MCP',
+    date: { fr: '2026', en: '2026' },
+    url: 'https://verify.skilljar.com/c/gowi6vu8sib5',
+  },
+  {
+    name: 'MCP: Advanced Topics',
+    date: { fr: '2026', en: '2026' },
+    url: 'https://verify.skilljar.com/c/626idhj2nk6v',
   },
 ];
 

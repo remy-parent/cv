@@ -8,9 +8,9 @@
     "contact": "Contact"
   },
   "hero": {
-    "availability": "Available · Full-time · Remote friendly",
-    "hook": "9 years of back-end experience in e-commerce at scale.",
-    "description": "I help e-commerce teams turn business needs into reliable, well-architected systems. 9 years of back-end experience, from legacy refactors to greenfield microservices.",
+    "availability": "Senior Full-stack · Available · Remote friendly",
+    "hook": "Senior full-stack developer with a strong back-end e-commerce background.",
+    "description": "A strong back-end background (e-commerce at scale), now focused on modern full-stack: React / Next.js / TypeScript on the front, Node.js / API on the server. I ship complete products, typed and tested end-to-end.",
     "ctaContact": "Contact me",
     "ctaBackground": "View my background"
   },

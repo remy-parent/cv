@@ -2,22 +2,44 @@ import type { ExperienceEntry } from '../types/content';
 
 export const experience: ExperienceEntry[] = [
   {
+    id: 'personal-fullstack',
+    period: { fr: 'Depuis sept. 2025', en: 'Since Sep. 2025' },
+    company: 'Projets personnels & montée en compétence',
+    location: 'Aix-en-Provence, France',
+    title: { fr: 'Développeur Full-stack', en: 'Full-stack Developer' },
+    bullets: {
+      fr: [
+        'Période dédiée au full-stack moderne : conception et développement d’applications web personnelles en React / Next.js / TypeScript.',
+        'Produits typés et testés de bout en bout (Vitest / Playwright), déployés en CI/CD sur Vercel.',
+        'Workflow assisté par IA, certifié Claude Code (voir Certifications).',
+      ],
+      en: [
+        'Dedicated period focused on modern full-stack: designing and building personal web apps in React / Next.js / TypeScript.',
+        'End-to-end typed and tested products (Vitest / Playwright), deployed via CI/CD on Vercel.',
+        'AI-assisted workflow, Claude Code certified (see Certifications).',
+      ],
+    },
+    tags: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Vitest', 'CI/CD', 'Vercel'],
+  },
+  {
     id: 'darwin-salomon',
     period: { fr: 'Juil. 2023 — Sept. 2025', en: 'Jul. 2023 — Sep. 2025' },
     company: 'Darwin Partners — Contrat chez Salomon',
     location: 'Annecy, France',
-    title: { fr: 'Développeur Back-end', en: 'Back-end Developer' },
+    title: { fr: 'Développeur Full-stack', en: 'Full-stack Developer' },
     bullets: {
       fr: [
-        'Maintenance et optimisation des performances de la plateforme e-commerce Magento.',
-        'Refonte du site en Next.js, création et maintenance de microservices.',
+        'Contribué à la refonte complète du site Salomon en Next.js / React (monorepo), responsable de la page produit au sein d’une équipe de 5 développeurs (composants React réutilisables, logique, état, Tailwind).',
+        'Conçu et maintenu seul le microservice central des données produits (Node.js / TypeScript) et 2 librairies partagées, alimentant un catalogue de 2 500–3 500 modèles (30 000+ SKUs) déployé sur 12 pays (EMEA & Amérique du Nord).',
+        'Fait évoluer et maintenu 5 sites e-commerce Amer Sports sous Magento (Salomon, Peak Performance, Wilson, Atomic, Armada) pendant les ~18 premiers mois, avant le lancement de la refonte.',
       ],
       en: [
-        'Maintained and optimized the performance of the Magento e-commerce platform.',
-        'Led the Next.js site rebuild, built and maintained microservices.',
+        'Contributed to the full rebuild of the Salomon site in Next.js / React (monorepo), owning the product page within a team of 5 developers (reusable React components, logic, state, Tailwind).',
+        'Solely designed and maintained the central product-data microservice (Node.js / TypeScript) and 2 shared libraries, powering a catalog of 2,500–3,500 models (30,000+ SKUs) deployed across 12 countries (EMEA & North America).',
+        'Evolved and maintained 5 Amer Sports e-commerce sites on Magento (Salomon, Peak Performance, Wilson, Atomic, Armada) for the first ~18 months, before the rebuild launched.',
       ],
     },
-    tags: ['Salomon', 'Magento 2', 'Next.js', 'Microservices'],
+    tags: ['Next.js', 'React', 'Node.js', 'TypeScript', 'Microservices', 'Magento 2'],
   },
   {
     id: 'quatrecentquatre',
@@ -27,27 +49,17 @@ export const experience: ExperienceEntry[] = [
     title: { fr: 'Chef d’équipe & Lead développeur', en: 'Team Lead & Lead Developer' },
     bullets: {
       fr: [
-        'Supervision de 5 développeurs back-end, coordination technique et amélioration des bonnes pratiques.',
-        "Analyse des besoins et définition de l'architecture (BDD & code).",
-        'Découpage, estimation et développement des fonctionnalités.',
-        'Support QA, revue de code, formation des juniors, déploiements et maintenance technique.',
+        'Développé plusieurs sites e-commerce sur des stacks variées (Magento pour Trevi et Dutailier, Laravel pour Point-S et Can-Am Retailers, CraftCMS pour La Cage), de l’architecture (BDD & code) aux fonctionnalités.',
+        'Traduit les besoins clients en fonctionnalités avec les analystes, estimé et découpé les tâches, développé et refactoré du code legacy, puis assuré déploiements et mises à jour de frameworks (support QA).',
+        'Monté en compétence jusqu’à devenir Lead d’une équipe de 7 développeurs : revues de code, formation des juniors, ateliers techniques (SOLID, design patterns) et rituels EOS (Level 10 meetings).',
       ],
       en: [
-        'Supervised 5 back-end developers, technical coordination and best-practice improvements.',
-        'Analyzed requirements and defined architecture (database & code).',
-        'Broke down, estimated, and developed features.',
-        'QA support, code review, junior mentoring, deployments and technical maintenance.',
+        'Built several e-commerce sites across varied stacks (Magento for Trevi and Dutailier, Laravel for Point-S and Can-Am Retailers, CraftCMS for La Cage), from architecture (database & code) to features.',
+        'Translated client needs into features with the analysts, estimated and broke down tasks, developed and refactored legacy code, then handled deployments and framework upgrades (QA support).',
+        'Grew into the Lead of a team of 7 developers: code reviews, junior mentoring, technical workshops (SOLID, design patterns) and EOS rituals (Level 10 meetings).',
       ],
     },
-    tags: [
-      'Trevi',
-      'Dutailier',
-      'Can-Am On-Road',
-      'Can-Am Off-Road',
-      'Sea-Doo',
-      'Ski-Doo',
-      'Point-S',
-    ],
+    tags: ['Magento', 'Laravel', 'CraftCMS', 'PHP', 'MySQL'],
   },
   {
     id: 'u92-pulse',
@@ -60,15 +72,15 @@ export const experience: ExperienceEntry[] = [
     },
     bullets: {
       fr: [
-        'Développement complet d’une application interne (Pulse), en tant que seul développeur.',
-        'Conception du concept et de l’architecture.',
+        'Développé de bout en bout Pulse, une application RH interne, en tant que seul développeur back-end (PHP / Symfony).',
+        'Conçu l’architecture technique du projet et défini le concept produit.',
       ],
       en: [
-        'Built an internal application (Pulse) end-to-end as the sole developer.',
-        'Designed the concept and the architecture.',
+        'Built Pulse, an internal HR application, end-to-end as the sole back-end developer (PHP / Symfony).',
+        'Designed the project’s technical architecture and defined the product concept.',
       ],
     },
-    tags: ['Pulse'],
+    tags: ['PHP', 'Symfony', 'MySQL'],
   },
   {
     id: 'o2web',
@@ -78,17 +90,17 @@ export const experience: ExperienceEntry[] = [
     title: { fr: 'Développeur Magento Back-end / Lead', en: 'Magento Back-end Developer / Lead' },
     bullets: {
       fr: [
-        'Analyse des besoins clients et collaboration avec les analystes pour définir les fonctionnalités.',
-        'Conception de l’architecture back-end.',
-        'Formation des développeurs juniors, revue de code, amélioration du code legacy.',
+        'Bâti l’architecture back-end de 9 sites e-commerce (7 en Magento 2, 2 en Drupal 8) pour des marques nationales (BRP, MUST, Maison Corbeil…).',
+        'Mené la migration Magento 1 → 2 de HockeyShot : montée de version, refonte du code legacy et nouvelles fonctionnalités.',
+        'Développé les intégrations critiques (passerelles de paiement, connecteurs ERP / CRM) et encadré jusqu’à 3 développeurs.',
       ],
       en: [
-        'Analyzed client needs and collaborated with analysts to define features.',
-        'Designed the back-end architecture.',
-        'Mentored junior developers, code review, legacy code improvements.',
+        'Built the back-end architecture of 9 e-commerce sites (7 on Magento 2, 2 on Drupal 8) for national brands (BRP, MUST, Maison Corbeil…).',
+        'Led the Magento 1 → 2 migration of HockeyShot: version upgrade, legacy code overhaul and new features.',
+        'Developed the critical integrations (payment gateways, ERP / CRM connectors) and mentored up to 3 developers.',
       ],
     },
-    tags: ['BRP Shop', 'MUST', 'Maison Corbeil', 'Maison Adam', 'XPS Lubrifiants', 'HockeyShot'],
+    tags: ['Magento 2', 'Drupal 8', 'PHP', 'ERP / CRM', 'Passerelles de paiement'],
   },
   {
     id: 'monolith',
@@ -97,9 +109,13 @@ export const experience: ExperienceEntry[] = [
     location: 'Montréal, Canada',
     title: { fr: 'Développeur Full-stack', en: 'Full-stack Developer' },
     bullets: {
-      fr: ['Correction de bugs et développement des fonctionnalités UI/UX.'],
-      en: ['Bug fixing and UI/UX feature development.'],
+      fr: [
+        'Développement full-stack orienté back-end sur des projets e-commerce (WooCommerce et Magento 1 en PHP, Shopify en JavaScript) : logique applicative et intégration des fonctionnalités.',
+      ],
+      en: [
+        'Back-end-oriented full-stack development on e-commerce projects (WooCommerce and Magento 1 in PHP, Shopify in JavaScript): application logic and feature integration.',
+      ],
     },
-    tags: ['BiogasWorld', 'Cycle Néron', 'Nature Express'],
+    tags: ['WooCommerce', 'Magento 1', 'Shopify', 'PHP', 'JavaScript'],
   },
 ];

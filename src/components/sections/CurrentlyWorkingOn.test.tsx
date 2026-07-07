@@ -17,7 +17,7 @@ describe('CurrentlyWorkingOn', () => {
     expect(screen.getByRole('heading', { name: 'Claude Code in Action' })).toBeInTheDocument();
 
     const verifyLinks = screen.getAllByRole('link', { name: /Vérifier/ });
-    expect(verifyLinks).toHaveLength(2);
+    expect(verifyLinks).toHaveLength(5);
     expect(verifyLinks[0]).toHaveAttribute('href', 'https://verify.skilljar.com/c/9vnxrrovpbnx');
     expect(verifyLinks[0]).toHaveAttribute('target', '_blank');
     expect(verifyLinks[0]).toHaveAttribute('rel', 'noopener noreferrer');
