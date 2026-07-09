@@ -9,7 +9,7 @@ export const experience: ExperienceEntry[] = [
     title: { fr: 'Développeur Full-stack', en: 'Full-stack Developer' },
     bullets: {
       fr: [
-        'Période dédiée au full-stack moderne : conception et développement d’applications web personnelles en React / Next.js / TypeScript.',
+        'Période dédiée au full-stack moderne : conception et développement d’applications web personnelles en React / Next.js / TypeScript.',
         'Produits typés et testés de bout en bout (Vitest / Playwright), déployés en CI/CD sur Vercel.',
         'Workflow assisté par IA, certifié Claude Code (voir Certifications).',
       ],
@@ -51,7 +51,7 @@ export const experience: ExperienceEntry[] = [
       fr: [
         'Développé plusieurs sites e-commerce sur des stacks variées (Magento pour Trevi et Dutailier, Laravel pour Point-S et Can-Am Retailers, CraftCMS pour La Cage), de l’architecture (BDD & code) aux fonctionnalités.',
         'Traduit les besoins clients en fonctionnalités avec les analystes, estimé et découpé les tâches, développé et refactoré du code legacy, puis assuré déploiements et mises à jour de frameworks (support QA).',
-        'Monté en compétence jusqu’à devenir Lead d’une équipe de 7 développeurs : revues de code, formation des juniors, ateliers techniques (SOLID, design patterns) et rituels EOS (Level 10 meetings).',
+        'Monté en compétence jusqu’à devenir Lead d’une équipe de 7 développeurs : revues de code, formation des juniors, ateliers techniques (SOLID, design patterns) et rituels EOS (Level 10 meetings).',
       ],
       en: [
         'Built several e-commerce sites across varied stacks (Magento for Trevi and Dutailier, Laravel for Point-S and Can-Am Retailers, CraftCMS for La Cage), from architecture (database & code) to features.',
@@ -91,7 +91,7 @@ export const experience: ExperienceEntry[] = [
     bullets: {
       fr: [
         'Bâti l’architecture back-end de 9 sites e-commerce (7 en Magento 2, 2 en Drupal 8) pour des marques nationales (BRP, MUST, Maison Corbeil…).',
-        'Mené la migration Magento 1 → 2 de HockeyShot : montée de version, refonte du code legacy et nouvelles fonctionnalités.',
+        'Mené la migration Magento 1 → 2 de HockeyShot : montée de version, refonte du code legacy et nouvelles fonctionnalités.',
         'Développé les intégrations critiques (passerelles de paiement, connecteurs ERP / CRM) et encadré jusqu’à 3 développeurs.',
       ],
       en: [
@@ -110,7 +110,7 @@ export const experience: ExperienceEntry[] = [
     title: { fr: 'Développeur Full-stack', en: 'Full-stack Developer' },
     bullets: {
       fr: [
-        'Développement full-stack orienté back-end sur des projets e-commerce (WooCommerce et Magento 1 en PHP, Shopify en JavaScript) : logique applicative et intégration des fonctionnalités.',
+        'Développement full-stack orienté back-end sur des projets e-commerce (WooCommerce et Magento 1 en PHP, Shopify en JavaScript) : logique applicative et intégration des fonctionnalités.',
       ],
       en: [
         'Back-end-oriented full-stack development on e-commerce projects (WooCommerce and Magento 1 in PHP, Shopify in JavaScript): application logic and feature integration.',

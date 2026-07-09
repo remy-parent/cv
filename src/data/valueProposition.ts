@@ -4,8 +4,8 @@ export const valueProposition: ValueCardItem[] = [
   {
     title: { fr: 'Full-stack, typé de bout en bout', en: 'End-to-end typed full-stack' },
     description: {
-      fr: 'React / Next.js / TypeScript côté front, Node.js / API côté serveur : des produits complets, typés et testés (Vitest / Playwright).',
-      en: 'React / Next.js / TypeScript on the front, Node.js / API on the server: complete products, typed and tested (Vitest / Playwright).',
+      fr: 'React / Next.js / TypeScript côté front, Node.js / API côté serveur : des produits complets, typés et testés (Vitest / Playwright).',
+      en: 'React / Next.js / TypeScript on the front, Node.js / API on the server: complete products, typed and tested (Vitest / Playwright).',
     },
   },
   {

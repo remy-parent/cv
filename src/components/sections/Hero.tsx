@@ -8,13 +8,13 @@ export default function Hero() {
 
   return (
     <AnimatedSection className="mx-auto flex max-w-5xl flex-col-reverse items-center gap-10 px-6 py-20 md:flex-row md:py-32">
-      <div className="flex-1 text-center md:text-left">
+      <div className="flex-1 text-center md:flex-[1.4] md:text-left">
         <p className="mb-4 inline-block rounded-full border border-border px-4 py-1 font-mono text-xs uppercase tracking-widest text-accent">
           {t('hero.availability')}
         </p>
         <h1 className="text-4xl text-text md:text-6xl">Remy Parent</h1>
         <p className="mt-4 text-xl text-accent md:text-2xl">{t('hero.hook')}</p>
-        <p className="mt-4 max-w-xl text-text-muted md:mx-0">{t('hero.description')}</p>
+        <p className="mt-4 max-w-2xl text-text-muted md:mx-0">{t('hero.description')}</p>
         <div className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
           <Button href="#contact">{t('hero.ctaContact')}</Button>
           <Button href="#experience" variant="secondary">
