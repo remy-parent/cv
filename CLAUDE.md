@@ -21,7 +21,9 @@ This is `remyparent-cv`, Remy Parent's bilingual (FR/EN) personal CV/portfolio s
 - Playwright e2e: `npx playwright test` (config in `playwright.config.ts`, tests in `tests/`)
 - Run a single Playwright test: `npx playwright test tests/example.spec.ts`
 
-CI (`.github/workflows/ci.yml`) runs, in order: `typecheck`, `lint`, `format:check`, `test:run`. A separate workflow runs Playwright against chromium/firefox/webkit. Match these locally before pushing.
+CI (`.github/workflows/ci.yml`) runs, in order: `typecheck`, `lint`, `format:check`, `check:i18n`, `test:run`. A separate workflow runs Playwright against chromium/firefox/webkit. Match these locally before pushing.
+
+- `npm run check:i18n` — audits FR/EN parity (`scripts/check-i18n.mjs`): locale key parity between `src/i18n/locales/{fr,en}.json`, `t()` keys that don't resolve, and incomplete `Bilingual<T>` fields in `src/data/*.ts` (empty sides, fr/en array-length mismatch, untranslated duplicates). Zero-dependency: uses `node --experimental-strip-types` to read the `.ts` data files. Exits non-zero on errors; warnings don't fail. The `/check-i18n` skill wraps the same script.
 
 A Husky `pre-commit` hook runs `npx lint-staged`, which runs `eslint --fix` + `prettier --write` on staged `.ts`/`.tsx` files and `prettier --write` on staged `.json`/`.css`/`.md` files.
 

@@ -1,0 +1,23 @@
+{
+  "skill_name": "check-i18n",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Je viens d'ajouter une nouvelle section \"Certifications\" avec un bouton, j'ai mis le texte dans fr.json mais je crois que j'ai oublié l'anglais. Tu peux vérifier que mes traductions FR/EN sont complètes avant que je fasse une PR ?",
+      "expected_output": "Runs the check-i18n script, reports the missing en.json key(s) as errors, offers to add the English translation.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "J'ai retravaillé les bullets d'expérience dans src/data/experience.ts. Est-ce que le contenu bilingue du CV est toujours cohérent entre le français et l'anglais ?",
+      "expected_output": "Runs the checker, validates Bilingual data completeness (empty fields, fr/en array length parity, untranslated duplicates), reports findings.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "check the translations are in sync before I deploy",
+      "expected_output": "Recognizes this as an i18n parity audit, runs the checker from repo root with the strip-types flag, summarizes errors and warnings.",
+      "files": []
+    }
+  ]
+}
