@@ -23,6 +23,9 @@ export default function Home() {
           content="Remy Parent — Senior full-stack developer with a strong back-end e-commerce background. React / Next.js / TypeScript on the front, Node.js / API on the server — complete products, typed and tested end-to-end."
         />
         <link rel="canonical" href={`${siteUrl}/${lang}`} />
+        <link rel="alternate" hrefLang="fr" href={`${siteUrl}/fr`} />
+        <link rel="alternate" hrefLang="en" href={`${siteUrl}/en`} />
+        <link rel="alternate" hrefLang="x-default" href={`${siteUrl}/`} />
       </Helmet>
       <Nav />
       <main>
