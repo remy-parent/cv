@@ -9,7 +9,7 @@ This is `remyparent-cv`, Remy Parent's bilingual (FR/EN) personal CV/portfolio s
 ## Commands
 
 - `npm run dev` — start the Vite dev server
-- `npm run build` — typecheck (`tsc -b`) then build for production
+- `npm run build` — typecheck (`tsc -b`), build for production, then prerender `/fr` and `/en` to static HTML (`npm run prerender`: SSR build of `src/entry-server.tsx` + `scripts/prerender.mjs` writes `dist/{fr,en}/index.html` so crawlers without JS see full pages)
 - `npm run preview` — preview the production build locally
 - `npm run lint` / `npm run lint:fix` — ESLint
 - `npm run format` / `npm run format:check` — Prettier
@@ -35,7 +35,8 @@ A Husky `pre-commit` hook runs `npx lint-staged`, which runs `eslint --fix` + `p
 - **Styling**: Tailwind v4 via `@tailwindcss/vite`. Design tokens (`--color-bg`, `--color-accent`, `--font-heading` (Outfit 800), `--font-mono` (DM Mono)) are declared in a `@theme` block in `src/index.css` and consumed as ordinary Tailwind utilities (`bg-bg`, `text-accent`, `font-heading`, etc.). Fonts are loaded via Google Fonts `<link>` tags in `index.html`.
 - **Scroll animations**: `useScrollReveal` (`src/hooks/useScrollReveal.ts`) is an `IntersectionObserver` hook; `AnimatedSection` (`src/components/layout/AnimatedSection.tsx`) wraps each page section to apply the fade-up transition. Tests mock `IntersectionObserver` globally in `src/test/setup.ts`.
 - **Section composition**: `src/pages/Home.tsx` assembles the section components (`src/components/sections/`) in order — Hero, StatsBar, TechStack, Experience, ValueProposition, CurrentlyWorkingOn, Contact — wrapped by `Nav`/`Footer` from `src/components/layout/`. Shared primitives (`Tag`, `Button`, `SectionHeading`) live in `src/components/ui/`.
-- **SEO**: `react-helmet-async` wraps the app in `main.tsx`; `Home.tsx` sets title/description/canonical (canonical uses `VITE_SITE_URL`, see `.env.example`).
+- **SEO**: `react-helmet-async` wraps the app in `main.tsx`; `Home.tsx` sets title/description/canonical/hreflang (canonical uses `VITE_SITE_URL`, see `.env.example`).
+- **Prerendering**: `/fr` and `/en` are rendered to static HTML at build time (`src/entry-server.tsx` via `renderToString` + `scripts/prerender.mjs`). On React 19, head tags are hoisted to the start of the `renderToString` output and the script splits them from the body. `main.tsx` hydrates (`hydrateRoot`) when `#root` has children, otherwise mounts fresh (SPA fallback for `/` and `/404`). `src/i18n/i18n.ts` picks the initial language from `location.pathname` so hydration of `/en` matches the prerendered English HTML — keep these in sync when touching i18n init.
 - Unit/component tests (Vitest + Testing Library) are colocated as `Component.test.tsx` next to the component, per project convention. `src/test/setup.ts` wires up `@testing-library/jest-dom`, initializes i18next (resources must be loaded for `t()` calls to resolve in tests), and stubs `IntersectionObserver`.
 - End-to-end tests (Playwright) live in `tests/` and are configured separately via `playwright.config.ts`; not run by Vitest (`vite.config.ts` excludes `tests/**`).
 - TypeScript is split into `tsconfig.json` (solution/references root), `tsconfig.app.json` (app source, targets ES2023/DOM), and `tsconfig.node.json` (build tooling config files like `vite.config.ts`).
