@@ -12,7 +12,7 @@ import Contact from '../components/sections/Contact';
 
 export default function Home() {
   const { lang } = useParams();
-  const siteUrl = import.meta.env.VITE_SITE_URL ?? 'https://remyparent.com';
+  const siteUrl = import.meta.env.VITE_SITE_URL ?? 'https://cv.remyparent.com';
 
   return (
     <>
