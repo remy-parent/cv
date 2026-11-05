@@ -11,12 +11,12 @@ export const experience: ExperienceEntry[] = [
       fr: [
         'Période dédiée au full-stack moderne : conception et développement d’applications web personnelles en React / Next.js / TypeScript.',
         'Produits typés et testés de bout en bout (Vitest / Playwright), déployés en CI/CD sur Vercel.',
-        'Workflow assisté par IA, certifié Claude Code (voir Certifications).',
+        'Workflow assisté par IA ; certificats Anthropic Academy en Claude Code, Claude API et MCP (voir plus bas).',
       ],
       en: [
         'Dedicated period focused on modern full-stack: designing and building personal web apps in React / Next.js / TypeScript.',
         'End-to-end typed and tested products (Vitest / Playwright), deployed via CI/CD on Vercel.',
-        'AI-assisted workflow, Claude Code certified (see Certifications).',
+        'AI-assisted workflow; Anthropic Academy certificates in Claude Code, Claude API and MCP (see below).',
       ],
     },
     tags: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Vitest', 'CI/CD', 'Vercel'],
