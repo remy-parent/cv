@@ -52,10 +52,12 @@
     "title": "Let's work together",
     "description": "Available for new opportunities in Aix-en-Provence, Marseille, or remote.",
     "emailLabel": "Email",
-    "linkedinLabel": "LinkedIn"
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub"
   },
   "footer": {
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "source": "Source code"
   },
   "notFound": {
     "title": "Page not found",
