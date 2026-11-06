@@ -62,7 +62,7 @@ The only environment variable is `VITE_SITE_URL` (see [.env.example](.env.exampl
 
 - **CI** ([.github/workflows/ci.yml](.github/workflows/ci.yml)) runs on every pull request and on pushes to `master`. In order: `typecheck`, `lint`, `format:check`, `check:i18n`, `test:run`.
 - **Git hooks** are managed by Husky. The pre-commit hook runs lint-staged: ESLint with fixes and Prettier on staged TypeScript and JavaScript files, Prettier on staged JSON, CSS and Markdown files. The pre-push hook runs the unit tests.
-- **End-to-end tests** run in a separate workflow ([.github/workflows/playwright.yml](.github/workflows/playwright.yml)) on pull requests to `master` and on pushes to it. It runs `npx playwright test` against the Chromium, Firefox and WebKit projects defined in [playwright.config.ts](playwright.config.ts), and uploads the HTML report.
+- **End-to-end tests** run in a separate workflow ([.github/workflows/playwright.yml](.github/workflows/playwright.yml)) on pull requests to `master` and on pushes to it. It runs in the official Playwright container image, builds the site, serves it with `vite preview`, runs `npx playwright test` against the Chromium, Firefox and WebKit projects defined in [playwright.config.ts](playwright.config.ts), and uploads the HTML report.
 
 Unit and component tests sit next to the code they cover in `src/`; end-to-end tests are in [tests/](tests/).
 

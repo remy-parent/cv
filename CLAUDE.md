@@ -18,8 +18,8 @@ This is `remyparent-cv`, Remy Parent's bilingual (FR/EN) personal CV/portfolio s
 - `npm run test:run` — Vitest single run (use this in CI/non-interactive contexts)
 - `npm run test:coverage` — Vitest with coverage
 - Run a single Vitest test file: `npx vitest run path/to/file.test.tsx`
-- Playwright e2e: `npx playwright test` (config in `playwright.config.ts`, tests in `tests/`)
-- Run a single Playwright test: `npx playwright test tests/example.spec.ts`
+- Playwright e2e: `npx playwright test` (config in `playwright.config.ts`, tests in `tests/`). It builds the site and serves it with `vite preview` first, so the tests run against the production build, prerendered pages included.
+- Run a single Playwright test: `npx playwright test tests/site.spec.ts`
 
 CI (`.github/workflows/ci.yml`) runs, in order: `typecheck`, `lint`, `format:check`, `check:i18n`, `test:run`. A separate workflow runs Playwright against chromium/firefox/webkit. Match these locally before pushing.
 
