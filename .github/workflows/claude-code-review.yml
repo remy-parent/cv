@@ -35,7 +35,7 @@ jobs:
         id: claude-review
         uses: anthropics/claude-code-action@v1
         with:
-          claude_code_oauth_token: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           # Allow PRs opened by vercel[bot] (e.g. Speed Insights setup) to be reviewed
           # instead of failing the guard against bot-initiated workflows.
           allowed_bots: 'vercel'
