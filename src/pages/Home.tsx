@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import Nav from '../components/layout/Nav';
 import Footer from '../components/layout/Footer';
@@ -12,16 +13,14 @@ import Contact from '../components/sections/Contact';
 
 export default function Home() {
   const { lang } = useParams();
+  const { t } = useTranslation();
   const siteUrl = import.meta.env.VITE_SITE_URL ?? 'https://cv.remyparent.com';
 
   return (
     <>
       <Helmet>
         <title>Remy Parent — Senior Full-stack Developer</title>
-        <meta
-          name="description"
-          content="Remy Parent — Senior full-stack developer with a strong back-end e-commerce background. React / Next.js / TypeScript on the front, Node.js / API on the server — complete products, typed and tested end-to-end."
-        />
+        <meta name="description" content={t('seo.description')} />
         <link rel="canonical" href={`${siteUrl}/${lang}`} />
         <link rel="alternate" hrefLang="fr" href={`${siteUrl}/fr`} />
         <link rel="alternate" hrefLang="en" href={`${siteUrl}/en`} />

@@ -7,10 +7,13 @@
     "currentlyOn": "Currently",
     "contact": "Contact"
   },
+  "seo": {
+    "description": "Remy Parent — Senior full-stack developer building with TypeScript and the Claude API, backed by back-end e-commerce at scale (PHP, Magento 2, AWS)."
+  },
   "hero": {
     "availability": "Senior Full-stack · Available · Remote friendly",
-    "hook": "Senior full-stack developer with a strong back-end e-commerce background.",
-    "description": "A strong back-end background (e-commerce at scale), now focused on modern full-stack: React / Next.js / TypeScript on the front, Node.js / API on the server. I ship complete products, typed and tested end-to-end.",
+    "hook": "Senior full-stack developer. TypeScript first, now building with the Claude API.",
+    "description": "TypeScript across the stack, from React interfaces to Node.js APIs, typed and tested end-to-end. Today I am building an app whose AI coach runs on the Claude API (tool use). Behind that, years of back-end e-commerce at scale: PHP, Magento 2, then Node.js microservices on AWS.",
     "ctaContact": "Contact me",
     "ctaBackground": "View my background"
   },

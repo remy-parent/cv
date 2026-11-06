@@ -2,10 +2,10 @@ import type { ValueCardItem } from '../types/content';
 
 export const valueProposition: ValueCardItem[] = [
   {
-    title: { fr: 'Full-stack, typé de bout en bout', en: 'End-to-end typed full-stack' },
+    title: { fr: 'TypeScript et l’API Claude', en: 'TypeScript and the Claude API' },
     description: {
-      fr: 'React / Next.js / TypeScript côté front, Node.js / API côté serveur : des produits complets, typés et testés (Vitest / Playwright).',
-      en: 'React / Next.js / TypeScript on the front, Node.js / API on the server: complete products, typed and tested (Vitest / Playwright).',
+      fr: 'TypeScript des deux côtés : React côté front, API Node.js côté serveur, le tout typé et testé (Vitest / Playwright). Par-dessus, je construis un coach IA sur l’API Claude, qui agit via le tool use.',
+      en: 'TypeScript on both sides: React on the front, Node.js APIs on the server, typed and tested (Vitest / Playwright). On top of that, I am building an AI coach on the Claude API that acts through tool use.',
     },
   },
   {

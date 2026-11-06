@@ -18,6 +18,19 @@ export const techStack: TechCategory[] = [
     skills: ['Node.js', 'TypeScript', 'PHP 7/8', 'Symfony', 'Laravel', 'Doctrine', 'POO'],
   },
   {
+    category: { fr: 'IA & Qualité', en: 'AI & Quality' },
+    skills: [
+      'Claude API',
+      'Tool use',
+      'MCP',
+      'Claude Code',
+      'Prompt Engineering',
+      'LLM',
+      'Revue de code',
+      'Méthodes agiles',
+    ],
+  },
+  {
     category: { fr: 'Data & APIs', en: 'Data & APIs' },
     skills: ['REST APIs', 'GraphQL', 'MySQL', 'NoSQL', 'DynamoDB', 'Elasticsearch', 'ETL'],
   },
@@ -28,10 +41,6 @@ export const techStack: TechCategory[] = [
   {
     category: { fr: 'Cloud & Architecture', en: 'Cloud & Architecture' },
     skills: ['AWS', 'Vercel', 'Serverless', 'Docker', 'Microservices', 'SOLID', 'Git', 'CI/CD'],
-  },
-  {
-    category: { fr: 'Qualité & IA', en: 'Quality & AI' },
-    skills: ['Revue de code', 'Méthodes agiles', 'Prompt Engineering', 'LLM', 'Claude Code'],
   },
   {
     category: { fr: 'Langues', en: 'Languages' },
