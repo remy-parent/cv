@@ -52,10 +52,12 @@
     "title": "Travaillons ensemble",
     "description": "Disponible pour de nouvelles opportunités à Aix-en-Provence, Marseille ou en remote.",
     "emailLabel": "Email",
-    "linkedinLabel": "LinkedIn"
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub"
   },
   "footer": {
-    "rights": "Tous droits réservés."
+    "rights": "Tous droits réservés.",
+    "source": "Code source"
   },
   "notFound": {
     "title": "Page introuvable",

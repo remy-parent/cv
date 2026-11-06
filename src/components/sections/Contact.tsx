@@ -4,6 +4,7 @@ import SectionHeading from '../ui/SectionHeading';
 
 const EMAIL = 'remy.email@icloud.com';
 const LINKEDIN = 'linkedin.com/in/remyparent';
+const GITHUB = 'github.com/xyphoide';
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -31,6 +32,19 @@ export default function Contact() {
               className="text-accent hover:underline"
             >
               {LINKEDIN}
+            </a>
+          </dd>
+        </div>
+        <div className="flex justify-center gap-2">
+          <dt className="text-text-muted">{t('contact.githubLabel')}:</dt>
+          <dd>
+            <a
+              href={`https://${GITHUB}`}
+              target="_blank"
+              rel="noreferrer"
+              className="text-accent hover:underline"
+            >
+              {GITHUB}
             </a>
           </dd>
         </div>

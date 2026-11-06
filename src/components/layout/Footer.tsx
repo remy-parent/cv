@@ -9,6 +9,16 @@ export default function Footer() {
       <p>
         Remy Parent — {year}. {t('footer.rights')}
       </p>
+      <p className="mt-2">
+        <a
+          href="https://github.com/xyphoide/cv"
+          target="_blank"
+          rel="noreferrer"
+          className="text-accent hover:underline"
+        >
+          {t('footer.source')}
+        </a>
+      </p>
     </footer>
   );
 }
