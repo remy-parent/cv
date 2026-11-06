@@ -17,6 +17,7 @@
     "test:coverage": "vitest run --coverage",
     "typecheck": "tsc -b",
     "check:i18n": "node --experimental-strip-types scripts/check-i18n.mjs",
+    "og:image": "node scripts/og-image.mjs",
     "prepare": "husky"
   },
   "dependencies": {

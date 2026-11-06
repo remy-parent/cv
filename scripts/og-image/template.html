@@ -1,0 +1,154 @@
+<!doctype html>
+<!--
+  Source of public/og-image.png, the card shown when the site is shared.
+  Edit this file, then run `npm run og:image` to regenerate the PNG.
+  The page is designed for a 2400x1260 viewport and is not responsive.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=2400" />
+    <title>Open Graph image</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@800&display=block"
+      rel="stylesheet"
+    />
+    <style>
+      /* Dark theme tokens, copied from the @theme block of src/index.css. */
+      :root {
+        --color-bg: #0d0e12;
+        --color-bg-raised: #15161c;
+        --color-border: #23242c;
+        --color-text: #e7e7ea;
+        --color-text-muted: #9a9aa5;
+        --color-accent: #f59e0b;
+        --font-heading: 'Outfit', sans-serif;
+        --font-mono: 'DM Mono', ui-monospace, monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      body {
+        position: relative;
+        width: 2400px;
+        height: 1260px;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 100% 0%, rgb(245 158 11 / 0.13), transparent 44%),
+          var(--color-bg);
+        color: var(--color-text);
+        font-family: var(--font-mono);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .text {
+        position: absolute;
+        top: 256px;
+        left: 176px;
+        white-space: nowrap;
+      }
+
+      /* Same mark as public/favicon.svg. */
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 152px;
+        height: 152px;
+        border: 2px solid var(--color-border);
+        border-radius: 36px;
+        background: var(--color-bg-raised);
+        color: var(--color-accent);
+        font-family: var(--font-heading);
+        font-size: 68px;
+        font-weight: 800;
+        letter-spacing: -0.05em;
+      }
+
+      .name {
+        margin-top: 78px;
+        font-family: var(--font-heading);
+        font-size: 166px;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.02em;
+      }
+
+      .subtitle {
+        margin-top: 45px;
+        color: var(--color-accent);
+        font-family: var(--font-heading);
+        font-size: 69px;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.02em;
+      }
+
+      .stack,
+      .background {
+        font-size: 40px;
+        line-height: 60px;
+      }
+
+      .stack {
+        margin-top: 61px;
+        font-weight: 500;
+      }
+
+      .background {
+        color: var(--color-text-muted);
+      }
+
+      .domain {
+        position: absolute;
+        bottom: 125px;
+        left: 176px;
+        color: var(--color-accent);
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1;
+      }
+
+      .portrait {
+        position: absolute;
+        top: 332px;
+        left: 1626px;
+        width: 596px;
+        height: 596px;
+        overflow: hidden;
+        border: 6px solid var(--color-accent);
+        border-radius: 50%;
+        box-shadow: 0 0 0 24px rgb(245 158 11 / 0.1);
+      }
+
+      /* Same framing as the hero portrait in src/components/sections/Hero.tsx. */
+      .portrait img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 22%;
+        translate: 5%;
+        scale: 1.1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text">
+      <div class="logo">RP.</div>
+      <h1 class="name">Remy Parent</h1>
+      <p class="subtitle">Senior Full-stack Developer</p>
+      <p class="stack">TypeScript · React · Node.js · Claude API</p>
+      <p class="background">Back-end e-commerce at scale — PHP · Magento 2 · AWS</p>
+    </div>
+    <p class="domain">cv.remyparent.com</p>
+    <div class="portrait">
+      <img src="../../src/assets/profile.jpg" alt="" />
+    </div>
+  </body>
+</html>
