@@ -1,33 +1,47 @@
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
 import { useTranslation } from 'react-i18next';
 
 type Theme = 'dark' | 'light';
 
-function getInitialTheme(): Theme {
-  if (typeof document !== 'undefined') {
-    const attr = document.documentElement.getAttribute('data-theme');
-    if (attr === 'light' || attr === 'dark') return attr;
-  }
+// The theme lives on <html data-theme>. The inline script in index.html sets it
+// before the first paint; this component only reads it and changes it on click.
+const listeners = new Set<() => void>();
+
+function subscribe(listener: () => void) {
+  listeners.add(listener);
+  return () => {
+    listeners.delete(listener);
+  };
+}
+
+function getTheme(): Theme {
+  return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+}
+
+// The prerendered HTML cannot know the visitor's theme and is always rendered as
+// dark. Hydration must start from the same value, then React switches to the real one.
+function getServerTheme(): Theme {
   return 'dark';
+}
+
+function applyTheme(theme: Theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  document
+    .querySelector('meta[name="theme-color"]')
+    ?.setAttribute('content', theme === 'light' ? '#f7f7f5' : '#0d0e12');
+  try {
+    localStorage.setItem('theme', theme);
+  } catch {
+    // Ignore storage errors (e.g. private mode).
+  }
+  listeners.forEach((listener) => listener());
 }
 
 export default function ThemeToggle() {
   const { t } = useTranslation();
-  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const theme = useSyncExternalStore(subscribe, getTheme, getServerTheme);
 
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-    document
-      .querySelector('meta[name="theme-color"]')
-      ?.setAttribute('content', theme === 'light' ? '#f7f7f5' : '#0d0e12');
-    try {
-      localStorage.setItem('theme', theme);
-    } catch {
-      // Ignore storage errors (e.g. private mode).
-    }
-  }, [theme]);
-
-  const toggle = () => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  const toggle = () => applyTheme(theme === 'dark' ? 'light' : 'dark');
 
   return (
     <button

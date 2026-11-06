@@ -13,13 +13,13 @@ This is `remyparent-cv`, Remy Parent's bilingual (FR/EN) personal CV/portfolio s
 - `npm run preview` — preview the production build locally
 - `npm run lint` / `npm run lint:fix` — ESLint
 - `npm run format` / `npm run format:check` — Prettier
-- `npm run typecheck` — `tsc --noEmit`
+- `npm run typecheck` — `tsc -b` (type-checks every project referenced by `tsconfig.json`: app source, build tooling config and e2e files; nothing is emitted)
 - `npm run test` — Vitest in watch mode
 - `npm run test:run` — Vitest single run (use this in CI/non-interactive contexts)
 - `npm run test:coverage` — Vitest with coverage
 - Run a single Vitest test file: `npx vitest run path/to/file.test.tsx`
-- Playwright e2e: `npx playwright test` (config in `playwright.config.ts`, tests in `tests/`). It builds the site and serves it with `vite preview` first, so the tests run against the production build, prerendered pages included.
-- Run a single Playwright test: `npx playwright test tests/site.spec.ts`
+- Playwright e2e: `npx playwright test` (config in `playwright.config.ts`, tests in `tests/`). The config's `webServer` builds the site and serves the production build with `vite preview`, so the tests run against the production build, prerendered pages included. Install the browsers once with `npx playwright install`.
+- Run a single Playwright test: `npx playwright test tests/routing.spec.ts`
 
 CI (`.github/workflows/ci.yml`) runs, in order: `typecheck`, `lint`, `format:check`, `check:i18n`, `test:run`. A separate workflow runs Playwright against chromium/firefox/webkit. Match these locally before pushing.
 
@@ -39,7 +39,7 @@ A Husky `pre-commit` hook runs `npx lint-staged`, which runs `eslint --fix` + `p
 - **Prerendering**: `/fr` and `/en` are rendered to static HTML at build time (`src/entry-server.tsx` via `renderToString` + `scripts/prerender.mjs`). On React 19, head tags are hoisted to the start of the `renderToString` output and the script splits them from the body. `main.tsx` hydrates (`hydrateRoot`) when `#root` has children, otherwise mounts fresh (SPA fallback for `/` and `/404`). `src/i18n/i18n.ts` picks the initial language from `location.pathname` so hydration of `/en` matches the prerendered English HTML — keep these in sync when touching i18n init.
 - Unit/component tests (Vitest + Testing Library) are colocated as `Component.test.tsx` next to the component, per project convention. `src/test/setup.ts` wires up `@testing-library/jest-dom`, initializes i18next (resources must be loaded for `t()` calls to resolve in tests), and stubs `IntersectionObserver`.
 - End-to-end tests (Playwright) live in `tests/` and are configured separately via `playwright.config.ts`; not run by Vitest (`vite.config.ts` excludes `tests/**`).
-- TypeScript is split into `tsconfig.json` (solution/references root), `tsconfig.app.json` (app source, targets ES2023/DOM), and `tsconfig.node.json` (build tooling config files like `vite.config.ts`).
+- TypeScript is split into `tsconfig.json` (solution/references root), `tsconfig.app.json` (app source, targets ES2023/DOM), `tsconfig.node.json` (build tooling config files like `vite.config.ts`), and `tsconfig.e2e.json` (`tests/` and `playwright.config.ts`).
 - ESLint config (`eslint.config.js`) is flat-config based: `@eslint/js` recommended + `typescript-eslint` recommended + `eslint-plugin-react-hooks` + `eslint-plugin-react-refresh` (Vite preset) + `eslint-plugin-jsx-a11y` recommended. Prettier integration is via `eslint-config-prettier` (lint and formatting are kept separate, not via `eslint-plugin-prettier`).
 
 ## Deployment notes

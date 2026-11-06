@@ -44,7 +44,7 @@ The only environment variable is `VITE_SITE_URL` (see [.env.example](.env.exampl
 | `npm run test`          | Runs Vitest, in watch mode when started from a terminal.                          |
 | `npm run test:run`      | Runs Vitest once.                                                                 |
 | `npm run test:coverage` | Runs Vitest once with a coverage report.                                          |
-| `npm run typecheck`     | Runs `tsc --noEmit`.                                                              |
+| `npm run typecheck`     | Type-checks the app, the tooling config and the end-to-end tests with `tsc -b`.   |
 | `npm run check:i18n`    | Audits FR/EN parity: locale keys, `t()` keys that do not resolve, bilingual data. |
 | `npm run prepare`       | Installs the Husky git hooks. npm runs it automatically after `npm install`.      |
 

@@ -12,7 +12,6 @@ describe('ThemeToggle', () => {
     render(<ThemeToggle />);
 
     const button = screen.getByRole('button');
-    expect(document.documentElement.getAttribute('data-theme')).toBe('dark');
     expect(button).toHaveAttribute('aria-pressed', 'false');
 
     fireEvent.click(button);
