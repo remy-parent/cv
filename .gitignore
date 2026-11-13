@@ -35,3 +35,4 @@ dist-ssr
 /*.pdf
 image_remy.JPEG
 /.claude/settings.local.json
+out/

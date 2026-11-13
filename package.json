@@ -18,6 +18,7 @@
     "typecheck": "tsc -b",
     "check:i18n": "node --experimental-strip-types scripts/check-i18n.mjs",
     "og:image": "node scripts/og-image.mjs",
+    "cv:pdf": "node --experimental-strip-types scripts/cv-pdf.mjs",
     "prepare": "husky"
   },
   "dependencies": {

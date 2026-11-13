@@ -1,6 +1,6 @@
 # remyparent-cv
 
-[![CI](https://github.com/xyphoide/cv/actions/workflows/ci.yml/badge.svg)](https://github.com/xyphoide/cv/actions/workflows/ci.yml)
+[![CI](https://github.com/remy-parent/cv/actions/workflows/ci.yml/badge.svg)](https://github.com/remy-parent/cv/actions/workflows/ci.yml)
 
 Bilingual (FR/EN) personal CV and portfolio site: a single page, built to static HTML and deployed on Vercel.
 

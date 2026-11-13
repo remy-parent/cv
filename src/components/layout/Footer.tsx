@@ -11,7 +11,7 @@ export default function Footer() {
       </p>
       <p className="mt-2">
         <a
-          href="https://github.com/xyphoide/cv"
+          href="https://github.com/remy-parent/cv"
           target="_blank"
           rel="noreferrer"
           className="text-accent hover:underline"
