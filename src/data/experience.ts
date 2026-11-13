@@ -31,7 +31,6 @@ export const experience: ExperienceEntry[] = [
       'TypeScript',
       'React',
       'Claude API',
-      'Claude Code',
       'Tool use',
       'Tailwind CSS',
       'Vitest',
