@@ -20,6 +20,21 @@ export default function ExperienceItem({ entry, lang }: ExperienceItemProps) {
           <li key={bullet}>{bullet}</li>
         ))}
       </ul>
+      {entry.links && (
+        <p className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+          {entry.links.map((link) => (
+            <a
+              key={link.url}
+              href={link.url}
+              target="_blank"
+              rel="noreferrer"
+              className="text-accent hover:underline"
+            >
+              {link.label[lang]} →
+            </a>
+          ))}
+        </p>
+      )}
       {entry.tags && (
         <div className="mt-4 flex flex-wrap gap-2">
           {entry.tags.map((tag) => (

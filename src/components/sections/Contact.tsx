@@ -4,7 +4,7 @@ import SectionHeading from '../ui/SectionHeading';
 
 const EMAIL = 'remy.email@icloud.com';
 const LINKEDIN = 'linkedin.com/in/remyparent';
-const GITHUB = 'github.com/xyphoide';
+const GITHUB = 'github.com/remy-parent';
 
 export default function Contact() {
   const { t } = useTranslation();

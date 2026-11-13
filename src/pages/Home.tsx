@@ -7,7 +7,7 @@ import Hero from '../components/sections/Hero';
 import TechStack from '../components/sections/TechStack';
 import Experience from '../components/sections/Experience';
 import ValueProposition from '../components/sections/ValueProposition';
-import CurrentlyWorkingOn from '../components/sections/CurrentlyWorkingOn';
+import Certifications from '../components/sections/Certifications';
 import Education from '../components/sections/Education';
 import Contact from '../components/sections/Contact';
 
@@ -32,7 +32,7 @@ export default function Home() {
         <TechStack />
         <Experience />
         <ValueProposition />
-        <CurrentlyWorkingOn />
+        <Certifications />
         <Education />
         <Contact />
       </main>

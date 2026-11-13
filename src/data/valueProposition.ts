@@ -11,8 +11,8 @@ export const valueProposition: ValueCardItem[] = [
   {
     title: { fr: 'E-commerce à grande échelle', en: 'E-commerce at scale' },
     description: {
-      fr: '8 ans à concevoir et faire évoluer des plateformes Magento et des microservices pour des marques internationales.',
-      en: '8 years designing and scaling Magento platforms and microservices for international brands.',
+      fr: '9+ ans d’e-commerce à concevoir et faire évoluer des plateformes Magento pour des marques internationales. Chez Salomon, j’ai aussi conçu un microservice de données produits en Node.js / TypeScript.',
+      en: '9+ years of e-commerce designing and scaling Magento platforms for international brands. At Salomon, I also built a product-data microservice in Node.js / TypeScript.',
     },
   },
   {

@@ -3,9 +3,9 @@ import { useCurrentLang } from '../../hooks/useCurrentLang';
 import type { Bilingual } from '../../types/content';
 import AnimatedSection from '../layout/AnimatedSection';
 import SectionHeading from '../ui/SectionHeading';
-import Tag from '../ui/Tag';
 
-const TAGS = ['Anthropic', 'Claude API', 'MCP', 'LLM Architecture', 'Prompt Engineering'];
+const PREP_COURSE_URL =
+  'https://www.udemy.com/certificate/UC-7e497c9d-99f1-425e-9549-3ae8c7c993ce/';
 
 interface Certification {
   name: string;
@@ -49,25 +49,14 @@ function AnthropicMark() {
   );
 }
 
-export default function CurrentlyWorkingOn() {
+export default function Certifications() {
   const { t } = useTranslation();
   const lang = useCurrentLang();
 
   return (
-    <AnimatedSection id="currently-on" className="mx-auto max-w-3xl px-6 py-20">
-      <SectionHeading eyebrow={t('currentlyOn.eyebrow')} title={t('currentlyOn.title')} />
-      <div className="rounded-2xl border border-accent bg-accent-soft p-8 text-center">
-        <h3 className="font-heading text-2xl text-text">
-          Claude Certified Developer — Foundations (CCDV-F)
-        </h3>
-        <p className="mt-1 text-sm text-accent">{t('currentlyOn.status')}</p>
-        <div className="mt-5 flex flex-wrap justify-center gap-2">
-          {TAGS.map((tag) => (
-            <Tag key={tag}>{tag}</Tag>
-          ))}
-        </div>
-      </div>
-      <div className="mt-6 grid gap-4 sm:grid-cols-2">
+    <AnimatedSection id="certifications" className="mx-auto max-w-3xl px-6 py-20">
+      <SectionHeading eyebrow={t('certifications.eyebrow')} title={t('certifications.title')} />
+      <div className="grid gap-4 sm:grid-cols-2">
         {CERTIFICATIONS.map((cert) => (
           <div
             key={cert.name}
@@ -77,7 +66,7 @@ export default function CurrentlyWorkingOn() {
             <div>
               <h4 className="font-heading text-lg text-text">{cert.name}</h4>
               <p className="mt-1 text-xs text-text-muted">
-                {t('currentlyOn.issuedBy')} · {cert.date[lang]}
+                {t('certifications.issuedBy')} · {cert.date[lang]}
               </p>
             </div>
             <a
@@ -86,10 +75,22 @@ export default function CurrentlyWorkingOn() {
               rel="noopener noreferrer"
               className="text-xs text-text-muted underline-offset-4 hover:text-accent hover:underline"
             >
-              {t('currentlyOn.verify')} →
+              {t('certifications.verify')} →
             </a>
           </div>
         ))}
+      </div>
+      <div className="mt-6 rounded-xl border border-border px-5 py-4 text-center">
+        <h4 className="font-heading text-base text-text">{t('certifications.prepTitle')}</h4>
+        <p className="mt-1 text-xs text-text-muted">{t('certifications.prepCourse')}</p>
+        <a
+          href={PREP_COURSE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 inline-block text-xs text-text-muted underline-offset-4 hover:text-accent hover:underline"
+        >
+          {t('certifications.verify')} →
+        </a>
       </div>
     </AnimatedSection>
   );

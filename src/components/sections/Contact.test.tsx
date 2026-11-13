@@ -6,8 +6,8 @@ describe('Contact', () => {
   it('renders the GitHub profile link in a new tab', () => {
     render(<Contact />);
 
-    const github = screen.getByRole('link', { name: 'github.com/xyphoide' });
-    expect(github).toHaveAttribute('href', 'https://github.com/xyphoide');
+    const github = screen.getByRole('link', { name: 'github.com/remy-parent' });
+    expect(github).toHaveAttribute('href', 'https://github.com/remy-parent');
     expect(github).toHaveAttribute('target', '_blank');
     expect(github).toHaveAttribute('rel', expect.stringContaining('noreferrer'));
   });

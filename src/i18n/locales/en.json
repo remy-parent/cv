@@ -4,7 +4,7 @@
     "stack": "Stack",
     "experience": "Experience",
     "values": "Values",
-    "currentlyOn": "Currently",
+    "certifications": "Certifications",
     "contact": "Contact"
   },
   "seo": {
@@ -13,7 +13,7 @@
   "hero": {
     "availability": "Senior Full-stack · Available · Remote friendly",
     "hook": "Senior full-stack developer. TypeScript first, now building with the Claude API.",
-    "description": "TypeScript across the stack, from React interfaces to Node.js APIs, typed and tested end-to-end. Today I am building an app whose AI coach runs on the Claude API (tool use). Behind that, years of back-end e-commerce at scale: PHP, Magento 2, then Node.js microservices on AWS.",
+    "description": "TypeScript across the stack, from React interfaces to Node.js APIs, typed and tested end-to-end. Today I am building an app whose AI coach runs on the Claude API (tool use). Behind that, years of back-end e-commerce at scale: PHP, Magento 2, then Node.js microservices on AWS. I develop with Claude Code every day (validated specs, review sub-agents, automatic review in CI).",
     "ctaContact": "Contact me",
     "ctaBackground": "View my background"
   },
@@ -34,12 +34,13 @@
     "eyebrow": "Why me",
     "title": "What I bring"
   },
-  "currentlyOn": {
-    "eyebrow": "Right now",
-    "title": "Currently working on",
-    "status": "In preparation · 2026",
+  "certifications": {
+    "eyebrow": "Anthropic Academy",
+    "title": "Certifications",
     "issuedBy": "Issued by Anthropic Education",
-    "verify": "Verify"
+    "verify": "Verify",
+    "prepTitle": "CCDV-F — in preparation",
+    "prepCourse": "Exam-prep course completed (Udemy, 14 hours, Nov. 2, 2026)"
   },
   "education": {
     "eyebrow": "Studies",

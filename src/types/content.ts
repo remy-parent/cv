@@ -4,7 +4,7 @@ export type Bilingual<T> = Record<Lang, T>;
 
 export interface TechCategory {
   category: Bilingual<string>;
-  skills: string[];
+  skills: (string | Bilingual<string>)[];
 }
 
 export interface ExperienceEntry {
@@ -15,6 +15,7 @@ export interface ExperienceEntry {
   title: Bilingual<string>;
   bullets: Bilingual<string[]>;
   tags?: string[];
+  links?: { label: Bilingual<string>; url: string }[];
 }
 
 export interface ValueCardItem {

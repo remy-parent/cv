@@ -11,7 +11,7 @@ export default function Nav() {
     { href: '#stack', label: t('nav.stack') },
     { href: '#experience', label: t('nav.experience') },
     { href: '#values', label: t('nav.values') },
-    { href: '#currently-on', label: t('nav.currentlyOn') },
+    { href: '#certifications', label: t('nav.certifications') },
     { href: '#contact', label: t('nav.contact') },
   ];
 

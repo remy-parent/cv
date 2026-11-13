@@ -7,7 +7,7 @@ describe('Footer', () => {
     render(<Footer />);
 
     const source = screen.getByRole('link', { name: /code source|source code/i });
-    expect(source).toHaveAttribute('href', 'https://github.com/xyphoide/cv');
+    expect(source).toHaveAttribute('href', 'https://github.com/remy-parent/cv');
     expect(source).toHaveAttribute('target', '_blank');
     expect(source).toHaveAttribute('rel', expect.stringContaining('noreferrer'));
 

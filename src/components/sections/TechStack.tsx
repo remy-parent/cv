@@ -17,9 +17,10 @@ export default function TechStack() {
           <div key={group.category.fr} className="rounded-2xl border border-border p-6">
             <h3 className="mb-4 font-heading text-lg text-text">{group.category[lang]}</h3>
             <div className="flex flex-wrap gap-2">
-              {group.skills.map((skill) => (
-                <Tag key={skill}>{skill}</Tag>
-              ))}
+              {group.skills.map((skill) => {
+                const label = typeof skill === 'string' ? skill : skill[lang];
+                return <Tag key={label}>{label}</Tag>;
+              })}
             </div>
           </div>
         ))}

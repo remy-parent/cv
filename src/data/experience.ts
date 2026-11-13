@@ -12,13 +12,19 @@ export const experience: ExperienceEntry[] = [
         'Période dédiée au full-stack moderne : conception et développement d’applications web personnelles en React / TypeScript.',
         'Développement en cours de Sami (non publiée, dépôt privé), une application bilingue de musculation et de suivi d’entraînement : une application web en TypeScript et une application iOS en SwiftUI. Son coach IA résident, construit sur l’API Claude (SDK Anthropic, tool use), enregistre une série, compose une séance ou répond à une question en passant par la même couche de services que l’interface, avec une boucle de tool use bornée et un quota d’usage IA atomique par utilisateur.',
         'Produits typés et testés de bout en bout (Vitest / Playwright), déployés en CI/CD sur Vercel.',
-        'Workflow assisté par IA ; certificats Anthropic Academy en Claude Code, Claude API et MCP (voir plus bas).',
+        'Développement augmenté par l’IA avec Claude Code : Spec-Driven Development (documents de design et briefs validés avant implémentation), Claude Code sous règles écrites (CLAUDE.md, permissions), commandes personnalisées, 5 sous-agents dont 2 de revue à froid, et serveur MCP Playwright pour la vérification de bout en bout.',
+        'Sur ce site : hooks Claude Code, skills et revue automatique par Claude en CI.',
+        'Certificats Anthropic Academy en Claude Code, Claude API et MCP (voir plus bas).',
+        'En préparation : certification Claude Certified Developer Foundations (CCDV-F). Cours de préparation à l’examen terminé (Udemy, 14 h, 2 nov. 2026).',
       ],
       en: [
         'Dedicated period focused on modern full-stack: designing and building personal web apps in React / TypeScript.',
         'Building Sami (in development, private repo), a bilingual strength-training and workout-logging app: a TypeScript web app and an iOS app in SwiftUI. Its resident AI coach, built on the Claude API (Anthropic SDK, tool use), logs a set, builds a workout or answers a question through the same service layer as the regular UI, with a bounded tool-use loop and a per-user atomic AI usage quota.',
         'End-to-end typed and tested products (Vitest / Playwright), deployed via CI/CD on Vercel.',
-        'AI-assisted workflow; Anthropic Academy certificates in Claude Code, Claude API and MCP (see below).',
+        'AI-augmented development with Claude Code: Spec-Driven Development (design documents and briefs validated before implementation), Claude Code under written rules (CLAUDE.md, permissions), custom commands, 5 sub-agents including 2 cold-review ones, and the Playwright MCP server for end-to-end verification.',
+        'On this site: Claude Code hooks, skills and automatic Claude review in CI.',
+        'Anthropic Academy certificates in Claude Code, Claude API and MCP (see below).',
+        'In preparation: Claude Certified Developer Foundations (CCDV-F) certification. Exam-prep course completed (Udemy, 14 hours, Nov. 2, 2026).',
       ],
     },
     tags: [
@@ -30,6 +36,15 @@ export const experience: ExperienceEntry[] = [
       'Vitest',
       'CI/CD',
       'Vercel',
+    ],
+    links: [
+      {
+        label: {
+          fr: 'Vitrine publique de Sami (GitHub)',
+          en: 'Sami public showcase (GitHub)',
+        },
+        url: 'https://github.com/remy-parent/sami-vitrine',
+      },
     ],
   },
   {
