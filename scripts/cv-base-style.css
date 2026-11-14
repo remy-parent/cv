@@ -1,0 +1,451 @@
+/* ════════════════════════════════════════════════════════════════════
+   Design de base du CV (PDF « Développeur Back-end Senior »), repris à l'identique.
+   Seules différences volontaires :
+   - --font-heading : pile sans-serif système (dans le PDF de base, Outfit ne se chargeait
+     pas et les titres étaient rendus en Helvetica / Arial gras : c'est ce rendu qu'on veut).
+   - Section « Ajouts » en bas pour les nouvelles données.
+   Pas de monospace nulle part, y compris dans les tags.
+   ════════════════════════════════════════════════════════════════════ */
+
+/* ── Design tokens ─────────────────────────────────────────────── */
+:root {
+  --bg: #f7f7f5;
+  --bg-raised: #ffffff;
+  --border: #e4e3df;
+  --text: #16171b;
+  --text-muted: #62636b;
+  --accent: #b9770d;
+  --accent-soft: rgba(245, 158, 11, 0.14);
+  --faint: #86878e;
+  --font-heading: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  background: #ecebe7;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 28px 16px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Page sheet ───────────────────────────────────────────────── */
+.sheet {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto 24px;
+  padding: 18mm 16mm 16mm;
+  background: var(--bg-raised);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Header ────────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.pill {
+  display: inline-block;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.name {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.headline {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  color: var(--accent);
+}
+
+.summary {
+  margin-top: 11px;
+  max-width: 62ch;
+  color: var(--text-muted);
+  font-size: 12.5px;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 116px;
+  height: 116px;
+  border-radius: 999px;
+  border: 2px solid var(--accent);
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  transform: scale(1.08);
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  margin-top: 13px;
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+.contact span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.contact .dot {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.contact a:hover {
+  color: var(--accent);
+}
+
+/* ── Section ───────────────────────────────────────────────────── */
+.section {
+  margin-top: 18px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+}
+
+.section-title {
+  font-size: 21px;
+  font-weight: 800;
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+
+/* ── Tech stack grid ───────────────────────────────────────────── */
+.stack {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9px;
+}
+
+.stack-card {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 11px 13px;
+}
+
+.stack-card h4 {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 7px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 10.5px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 10px;
+  color: var(--text-muted);
+  background: var(--bg);
+  white-space: nowrap;
+}
+
+.tag.accent {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* ── Experience ────────────────────────────────────────────────── */
+.xp {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 12px 16px;
+  margin-bottom: 9px;
+  page-break-inside: avoid;
+}
+
+.xp-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.xp-role {
+  font-size: 15px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.xp-period {
+  font-size: 11px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.xp-company {
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.xp-company .loc {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.xp ul {
+  margin: 9px 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.xp li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: var(--text);
+}
+
+.xp li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.xp .tags {
+  margin-top: 12px;
+}
+
+/* ── Two-up bottom grid ────────────────────────────────────────── */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.card {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  page-break-inside: avoid;
+}
+
+.edu-item + .edu-item {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.edu-title {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.edu-meta {
+  font-size: 11.5px;
+  color: var(--accent);
+  margin-top: 1px;
+}
+
+.edu-meta .muted {
+  color: var(--text-muted);
+}
+
+.cert {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.cert + .cert {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.cert svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--accent);
+  margin-top: 1px;
+}
+
+.cert-name {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.cert-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+.cert-verify {
+  font-size: 10.5px;
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.lang-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 9px;
+}
+
+.lang-row:last-child {
+  margin-bottom: 0;
+}
+
+.lang-row .level {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+/* ── Before code (discreet) ────────────────────────────────────── */
+.before {
+  margin-top: 11px;
+  font-size: 11.5px;
+  color: var(--faint);
+  border-left: 2px solid var(--border);
+  padding-left: 14px;
+}
+
+.before b {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ── Ajouts pour les nouvelles données (même langage visuel) ───── */
+.stack-card.wide {
+  grid-column: 1 / -1;
+}
+
+.xp-sub {
+  margin-top: 3px;
+  font-size: 11.5px;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.xp li a,
+.xp-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Pastille « joker » (et plus…) */
+.tag.more {
+  border-style: dashed;
+  background: transparent;
+  color: var(--faint);
+}
+
+/* Certifications : lignes plus serrées, séparateurs conservés */
+.cert-compact .cert + .cert {
+  margin-top: 6px;
+  padding-top: 6px;
+}
+
+/* Un titre de section ne reste jamais seul en bas de page */
+.section > .eyebrow,
+.section > .section-title {
+  break-after: avoid;
+}
+
+/* ── Print ─────────────────────────────────────────────────────── */
+@media print {
+  body {
+    background: #fff;
+    padding: 0;
+  }
+  /* Margins are owned by @page so they repeat on EVERY page. */
+  .sheet {
+    width: auto;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 12mm 14mm;
+}

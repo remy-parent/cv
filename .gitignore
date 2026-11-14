@@ -36,3 +36,4 @@ dist-ssr
 image_remy.JPEG
 /.claude/settings.local.json
 out/
+cv-versions/
