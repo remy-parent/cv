@@ -37,3 +37,8 @@ image_remy.JPEG
 /.claude/settings.local.json
 out/
 cv-versions/
+
+# Local environment files (never commit secrets or personal data)
+.env
+.env.*
+!.env.example
