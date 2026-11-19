@@ -81,7 +81,6 @@ const CONDENSED = {
     bullets: [
       'Sami (en développement, dépôt privé) : application bilingue de musculation et suivi d’entraînement, en TypeScript (web) et SwiftUI (iOS). Coach IA sur l’API Claude (SDK Anthropic) : enregistre une série, compose une séance ou répond via les mêmes services que l’interface ; boucle de tool use bornée, quota d’usage IA atomique par utilisateur. Typé, testé de bout en bout (Vitest / Playwright), CI/CD Vercel.',
       'Développement augmenté par l’IA : Spec-Driven Development (docs de design et briefs validés avant implémentation), Claude Code sous règles écrites (CLAUDE.md, permissions), commandes personnalisées, 5 sous-agents dont 2 de revue à froid, serveur MCP Playwright pour la vérification de bout en bout. Sur mon site (cv.remyparent.com, code public) : hooks, skills, revue automatique par Claude en CI.',
-      'En préparation : certification CCDV-F. Cours de préparation à l’examen terminé (Udemy, 14 h, 2 nov. 2026).',
     ],
     tags: ['TypeScript', 'Claude API', 'Claude Code', 'React', 'Vitest'],
   },
@@ -132,13 +131,24 @@ const CERTIFICATIONS = [
     url: 'https://verify.skilljar.com/c/hu8raudyayra',
   },
   {
-    name: 'Building with the Claude API',
-    date: '2026',
+    name: 'Building with Claude API',
+    date: 'Juil. 2026',
     url: 'https://verify.skilljar.com/c/ncmbuppm9k2m',
   },
-  { name: 'Introduction to MCP', date: '2026', url: 'https://verify.skilljar.com/c/gowi6vu8sib5' },
-  { name: 'MCP: Advanced Topics', date: '2026', url: 'https://verify.skilljar.com/c/626idhj2nk6v' },
+  {
+    name: 'Introduction to MCP',
+    date: 'Juil. 2026',
+    url: 'https://verify.skilljar.com/c/gowi6vu8sib5',
+  },
+  {
+    name: 'MCP: Advanced Topics',
+    date: 'Juil. 2026',
+    url: 'https://verify.skilljar.com/c/626idhj2nk6v',
+  },
 ];
+
+const PREP_COURSE_URL =
+  'https://www.udemy.com/certificate/UC-7e497c9d-99f1-425e-9549-3ae8c7c993ce/';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.resolve(process.argv[2] ?? path.join(root, 'out/cv-remy-parent.pdf'));
@@ -219,6 +229,8 @@ const certs = CERTIFICATIONS.map(
     `<div class="cert">${ICON}<div style="flex:1;display:flex;justify-content:space-between;align-items:baseline;gap:8px"><div class="cert-name">${esc(c.name)}</div><div class="cert-sub" style="white-space:nowrap">${esc(c.date)} · <a class="cert-verify" href="${c.url}">${esc(fr.certifications.verify)} →</a></div></div></div>`,
 ).join('');
 
+const prep = `<div class="cert">${ICON}<div style="flex:1;display:flex;justify-content:space-between;align-items:baseline;gap:8px"><div class="cert-name">Prépa CCDV-F (Udemy)</div><div class="cert-sub" style="white-space:nowrap">Nov. 2026 · <a class="cert-verify" href="${PREP_COURSE_URL}">${esc(fr.certifications.verify)} →</a></div></div></div>`;
+
 const heading = (eyebrow, title) =>
   `<div class="eyebrow">${esc(eyebrow)}</div><h2 class="section-title">${esc(title)}</h2>`;
 
@@ -247,7 +259,7 @@ ${jobs}</div>
     <div class="edu-item"><div class="edu-title">${esc(studyTitle)}</div><div class="edu-meta">${esc(studyPlace)} <span class="muted">· ${esc(fr.education.period)}</span></div></div>
     <div class="edu-item"><div class="edu-title">Avant le code (${beforeRange})</div><div class="edu-meta"><span class="muted">${esc(beforeText[0].toUpperCase() + beforeText.slice(1))}.</span></div></div>
   </div>
-  <div class="card cert-compact"><div class="eyebrow">${esc(fr.certifications.eyebrow)}</div><h2 class="section-title">Certifications</h2>${certs}</div>
+  <div class="card cert-compact"><div class="eyebrow">${esc(fr.certifications.eyebrow)}</div><h2 class="section-title">Certifications</h2>${certs}${prep}</div>
 </div>
 </div>
 </body></html>`;

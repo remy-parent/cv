@@ -26,17 +26,17 @@ const CERTIFICATIONS: Certification[] = [
   },
   {
     name: 'Building with the Claude API',
-    date: { fr: '2026', en: '2026' },
+    date: { fr: 'Juillet 2026', en: 'July 2026' },
     url: 'https://verify.skilljar.com/c/ncmbuppm9k2m',
   },
   {
     name: 'Introduction to MCP',
-    date: { fr: '2026', en: '2026' },
+    date: { fr: 'Juillet 2026', en: 'July 2026' },
     url: 'https://verify.skilljar.com/c/gowi6vu8sib5',
   },
   {
     name: 'MCP: Advanced Topics',
-    date: { fr: '2026', en: '2026' },
+    date: { fr: 'Juillet 2026', en: 'July 2026' },
     url: 'https://verify.skilljar.com/c/626idhj2nk6v',
   },
 ];

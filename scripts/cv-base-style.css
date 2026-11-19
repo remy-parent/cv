@@ -218,8 +218,8 @@ a {
   background: var(--bg-raised);
   border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 12px 16px;
-  margin-bottom: 9px;
+  padding: 9px 16px;
+  margin-bottom: 5px;
   page-break-inside: avoid;
 }
 
